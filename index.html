@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+    <head>                                                                            <!--head-->
+
+        <meta charset="UTF-8">                                                        <!--meta-->
+        <meta name="viewport" content="width=device-width , initial-scale=1.0 , maximum-scale=1.0 , user-scalable=no">
+        <meta name="keywords" content="">
+        <meta name="description" content=" ">
+        <title> anubhandha enterprises </title>                                                             <!--title-->
+
+        <link href="" type="text/css" rel="stylesheet" />                             <!--link-->
+        <link href="" type="text/css" rel="stylesheet" />
+
+        <style type="text/css"> 
+        
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-size: 20px;
+            font-family: 'montserrat', Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6em;
+            background-color: whitesmoke;
+            color: rgb(41, 41, 41);
+            scroll-behavior: smooth;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        header{
+            display: flex;
+            background-color: #00305371;
+            color: #666666;
+            align-items: center;
+            padding:0px 4%;
+            text-transform: capitalize;
+            justify-content:space-between;
+            z-index: 10;
+        }
+
+        .logo h1{
+            color:#d6d6d6;
+            padding: 20px;
+            font-weight: lighter;
+        }
+
+        
+        header .nav nav ul{
+            list-style: none;
+        }
+
+        header .nav nav ul li{
+            position: relative;
+            display: inline;
+            width: fit-content;
+            float: left;
+        }
+        
+
+        header .nav nav ul li a{
+            padding: 20px;
+            width: fit-content;
+            text-decoration: none;
+            color:rgb(209, 206, 206);
+            display: block;
+        }
+
+        header .nav nav ul li a:hover{
+            background-color: #01497c;
+            color: whitesmoke;
+        }
+
+        header .nav nav ul li ul{
+            position: absolute;
+            left: 0;
+            background-color: #052c47;
+            width: 150px;
+            display: none;
+        }
+
+        header .nav nav ul li ul li{
+            width: 100%;
+        }
+
+        header .nav nav ul li:hover > ul,
+        header .nav nav ul li:active > ul
+        header .nav nav ul li:focus-within > ul{
+            display: inline;
+        }
+
+        #check{
+            display:none;
+        }
+
+        header label{
+            display: none;
+        }
+
+        
+
+        .hero{
+            min-height: 80vh;
+            height: fit-content;
+            display: grid;
+            background-color: #00305371;
+            color: whitesmoke;
+            grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+            gap: 1.5em;
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        .back{
+            background-image: url(background.jpg);
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .first img {
+            width: clamp(260px, 90%, 500px);
+            object-fit: cover;
+            border-radius: 30% 70% 66% 34% / 45% 40% 60% 55% ;
+        }
+
+        .tag {
+            width: clamp(260px, 90%, 500px);
+            padding: 10px;
+            line-height: 1.5em;
+        }
+
+        .tag h1{
+            margin-bottom: 20px;
+            margin-top: 20px;
+            line-height: 1.2em;
+        }
+
+        p.cta {
+            font-weight: bolder;
+            width: fit-content;
+            margin-top: 30px;
+        }
+
+        p.cta a{
+            width: 100%;
+            height: 100%;
+            background-color: #FF3800;
+            text-transform: uppercase;
+            padding: 20px;
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        p.cta a:hover{
+            background-color: #ff5e32;
+        }
+
+        .catalog{
+            width: 100%;
+            height: fit-content;
+            background-color: #F2E7D4;
+        }
+         
+        .invite{
+            width: clamp(260px, 90%, 1200px);
+            display: grid;
+            margin: auto;
+            padding: 20px;
+            background-color: #f8e7c9;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 2rem;
+        }
+
+        article.inv1{
+            background-image: url(invitation.jpg);
+            background-attachment: scroll;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        article.inv2{
+            background-image: url(inv.jpg);
+            background-attachment: scroll;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .info{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.205);
+            color: rgba(255, 255, 255, 0.459);
+            padding: 20px;
+            text-transform: capitalize;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .info:hover, .info:active{
+            background-color: rgba(0, 0, 0, 0.671);
+            color: white;
+        }
+
+        article.inv3{
+            background-image: url(invitation2.jpg);
+            background-attachment: scroll;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+
+        .cathead h1{
+            width: fit-content;
+            font-weight: 400;
+            text-transform: capitalize;
+            color: #B76E79;
+            margin: auto;
+            line-height: 1.2em;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        
+
+        
+         
+
+        .about{
+            background-image: url(about.jpg);
+            background-position:center, center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .message{
+            background-color:rgba(0, 0, 0, 0.438) ;
+            color: white;
+            display: grid;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            justify-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .message h1{
+            color:#2d36a8;
+            padding: 20px;
+            text-transform: uppercase;
+            width: fit-content;
+        }
+
+        .message p{
+            width:clamp(250px, 90%, 600px);
+        }
+
+        .footer{
+            padding: 20px;
+            color: whitesmoke;
+            background-color: #001f3f;
+        }
+
+        .footer a{
+            color: whitesmoke;
+        }
+
+        p.social{
+    word-spacing: 15px;
+}
+
+.footer .formcov{
+    width: clamp(260px, 90%, 400px);
+    background-color: rgba(61, 61, 61, 0.473);
+    padding-left: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.footer form input{
+    background-color: transparent;
+    border: none;
+    text-indent: 1rem;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: grey;
+    border-bottom: white thin solid;
+  line-height: 2em;
+    transition: all .2s ease-in-out;
+    width: 250px;
+}
+
+.footer form input[type=submit]{
+    border: white medium solid;
+    margin-top: 15px;
+    background-color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    text-indent: 0rem;
+    color: black;
+    transition: transform .3s linear;
+}
+
+form h1.p{
+    line-height: 1.2em;
+    font-family:  'Brush Script MT', 'Brush Script Std', cursive;
+    color:whitesmoke;
+    color:#c43aff;
+    font-weight: 400;
+}
+
+.footer form input[type=submit]:focus, .footer form input[type=submit]:hover{
+    transform: translateY(-.1em);
+    background-color: rgb(194, 194, 194);
+    border: rgb(194, 194, 194) medium solid;
+    color: rgb(31, 31, 31);
+
+}
+
+
+
+ .footer form input:focus{
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+    transform: translateY(-.2em);
+}
+
+        a.smicon img{
+           width: 40px;
+           object-fit: contain;
+           height: 40px;
+           transition: all .2s ease-in-out;
+        }
+
+            a.smicon img:hover, a.smicon img:active{
+            transform:translateY(-.1em);
+       }
+
+.footer .outro{
+    display: grid;
+    width: clamp(260px, 90%, 1100px);
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    margin: auto;
+    gap: 2rem;
+    padding: 20px;
+}       
+
+
+        
+
+
+        @media (max-width:500px){
+            body{
+                font-size: 18px;
+            }
+        }
+
+
+
+        @media (max-width:900px){
+
+           header .nav{
+                left: -100%;
+                top: 20px;
+                background-color: #e0e0e0;
+                position: absolute;
+                transition: all .5s ease-in-out;
+            }
+
+            header .nav nav ul {
+                position: relative;
+            }
+
+            header .nav nav ul li{
+                width: 100%;
+            }
+
+            header .nav nav ul li a{
+                color: rgb(43, 43, 43);
+                margin: auto;
+            }
+
+
+            header .nav {
+                width: 80%;
+                height: 100%;
+            }
+
+
+            header label{
+                display: initial;
+            }
+
+            #check:checked ~ .nav {
+                left: 0;
+                
+            }
+
+
+
+            header label{
+            position: relative;
+            display: flex;
+            margin-right: 20px;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+         .middle{
+            height: 5px;
+            width: 35px;
+            background-color:whitesmoke;
+            border-radius: 50px;
+            position: absolute;
+            transition: 0.3s ease;
+        }
+
+        .bottom{
+            top: 10px;
+            height: 5px;
+            width: 35px;
+            background-color:whitesmoke;
+            border-radius: 50px;
+            position: absolute;
+            transition: 0.3s ease;
+        }
+
+         .top{
+            top: -10px;
+            height: 5px;
+            width: 35px;
+            background-color:whitesmoke;
+            border-radius: 50px;
+            position: absolute;
+            transition: 0.3s ease;
+        }
+
+        #check:checked ~ label .top{
+            transform:rotate(-35deg);
+            transform-origin: right;
+            
+        }
+
+        #check:checked ~  label .bottom{
+            transform:rotate(35deg);
+            transform-origin: right;
+            
+        }
+
+        #check:checked ~  label .middle{
+            transform:translatex(20px);
+            opacity: 0;
+            
+        }
+
+    }
+
+        </style>                                                                        <!--style-->
+        
+    </head>
+
+    <body>                                                                             <!--body-->
+
+        
+        <div class="back">
+            <header>
+                <div class="logo">
+                    <h1>anubhandha enterprises</h1>
+                </div>
+
+                <input type="checkbox" id="check">
+
+             <label for="check">
+                    <span class="top" id="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+            </label>
+
+                <div class="nav">
+
+                    <nav>
+
+                        <ul>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#catalog">catalog</a></li>
+                            <li><a href="#contact" id="cont">contact</a></li>
+                        </ul>
+                        
+                    </nav>
+                </div>
+            </header>
+            
+            <div class="hero">                                                         <!--hero-->
+                <div class="tag">
+                    <h1>Find the Perfect Design to Capture Your Love</h1>
+                    <p>Create Unforgettable Moments with Our Stunning Wedding Invitations</p>
+                     <p class="cta"><a href="#catalog">book now</a></p>
+                </div>
+
+                <div class="first">
+                    <img src="invitation.jpg" alt="happy customer using website"/>
+                </div>
+            </div>
+            </div>
+            
+
+           <div class="catalog" id="catalog">
+            <div class="cathead">
+                <h1> our catalog</h1>
+            </div>
+            <div class="invite">
+                <article class="inv1">
+                    <div class="info">
+                        <p>card name</p>
+                        <p>card rate</p>
+                    </div>
+                </article>
+                <article class="inv2">
+                    <div class="info">
+                        <p>card name</p>
+                        <p>card rate</p>
+                    </div>
+                </article>
+                <article class="inv3">
+                    <div class="info">
+                        <p>card name</p>
+                        <p>card rate</p>
+                    </div>
+                </article>
+            </div>
+           </div>
+
+            
+
+            </div>
+            
+            <div class="about" id="about">
+                <div class="message">
+                    <h1>About</h1>
+                    <p>Anubandha Enterprises in Magadi Road, Bangalore is known to satisfactorily cater to the demands of its customer base. The business came into existence in 2010 and has, since then, been a known name in its field. It stands located at #19, 14th Cross, Near Vinayaka Bakery, Cholurpalya, Magadi Road-560023.</p>
+
+                      <p>Customer centricity is at the core of Anubandha Enterprises in Magadi Road, Bangalore and it is this belief that has led the business to build long-term relationships. Ensuring a positive customer experience, making available goods and/or services that are of top-notch quality is given prime importance.</p>
+                    <p class="cta"><a href="#catalog">book now</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer">
+                <div class="outro">
+                    <article>
+                        
+                    </article>
+                    <article id="contact">
+                        <form method="post" action="https://formspree.io/f/mvoezgoq">
+                            <h1 class="p">Let's Connect</h1>
+                            <label><p> Name:</p><p> <input type="name" name="name"  size="15" required></p></label>
+                            <label><p>Contact number:</p><p> <input type="tel" name="ph-number" size="15"></p></label>
+                            <label><p>Email:</p><p> <input type="email" name="email" size="15"></p></label>
+                            <p><input type="submit" name="submitted" value="submit"></p>
+                        </form>
+            
+                        <article><p>Contact on</p>
+                            <p class="social"><a href="https://www.instagram.com/insta_yathi_05?igsh=eDZkdGpqcjcybmc4" target="_blank" class="smicon"><img src="instagramwhite.png" alt="instagram logo"></a>
+                                <a href="mailto:sarvankumar9457@gmail.com" target="_blank" class="smicon"><img src="emailwhite.png" alt="email logo"></a>    
+                                <a href="tel:9066558444" target="_blank" class="smicon"><img src="callwhite.png" alt="whatsapp logo"></a></p></article>
+                       
+                    </article>
+                </div>
+                <div class="copy">
+                    <p> &#169; 2024 <a href="https://yathishbn.github.io/justme">Yathish</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+
+        
+
+    </body>
+
+</html>
